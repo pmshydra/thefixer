@@ -44,9 +44,14 @@ docker run --name nginx -d \
 |`DOCKER_SOCK`| /var/run/docker.sock | Location of your docker socket |`DOCKER_SOCK=/var/run/docker.sock`|
 |`CURL_TIMEOUT`| 30 | Time to wait before restarting container |`CURL_TIMEOUT=30`|
 
-## Tell's it what container's to look for
+## Set whether to monitor all or selected containers
 | Sets container label status | Value | Description| Example |
 |-----------------------------|-------|------------|---------|
 |`ENV CONTAINER_LABEL`| `all` | `Watch all running containers.`|`CONTAINER_LABEL=all`|
 |`ENV CONTAINER_LABEL`| `(empty)` | `Watch only the containers with the label fixme=true`| `CONTAINER_LABEL`|
+
+## Set what container's you want to have monitored
+| Set other container's label status | Value | Description| Example |
+|------------------------------------|-------|------------|---------|
+|`fixme`|`true`|`Watch this container for health status.`|`fixme=true`|
 |`stop.timeout`| 20 | `Timeout per container` | `stop.timeout=20`|
